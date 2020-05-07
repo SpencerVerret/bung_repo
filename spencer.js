@@ -1,5 +1,5 @@
 const spencer = () => {
-    console.log('wazzzzzzzup');
+    console.log('wazzzzzzzup boiiiiii');
 };
 
 spencer();
