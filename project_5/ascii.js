@@ -6,6 +6,14 @@ $("#animationText").val(EXERCISE);
 $("#animationText").val(BIKE);
 $("#animationText").val(DIVE); 
 
+const animations = {
+    BLANK: "",
+    EXERCISE: "Frames for Exercise animation...",
+    JUGGLER: "Frames for Juggler animation...",
+    BIKE: "Frames for Bike animation...",
+    DIVE: "Frames for Dive animation..."
+};
+
 $(document).ready(function () {
     // Initialize
     $("#startButton").on("click", startAnimation);
@@ -18,16 +26,6 @@ $(document).ready(function () {
     disableButton("#stopButton");
     disableSelect("#animationSelect");
     disableButton("#turboCheckbox");
-
-    // Example animations
-    const animations = {
-        BLANK: "",
-        EXERCISE: "Frames for Exercise animation...",
-        JUGGLER: "Frames for Juggler animation...",
-        BIKE: "Frames for Bike animation...",
-        DIVE: "Frames for Dive animation..."
-    };
-
     // Set initial animation
     changeAnimation();
 });
