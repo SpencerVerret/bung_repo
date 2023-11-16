@@ -81,6 +81,10 @@ function changeFontSize() {
     $("#animationText").css("font-size", selectedSize);
 }
 
+// Event listener for the font size select dropdown
+$("#fontSizeSelect").on("change", changeFontSize);
+
+
 function toggleTurbo() {
     const isChecked = $("#turboCheckbox").prop("checked");
     const delay = isChecked ? 50 : 250;
