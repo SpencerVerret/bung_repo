@@ -1,25 +1,24 @@
+<!--Spencer Verret, INFX 370, ascii.html for project 5-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Pulls sylesheet, js and JQuery-->
     <title>ASCIImation</title>
     <link rel="stylesheet" href="ascii.css">
-    <!-- Include jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Include animations.js before ascii.js -->
     <script src="animations.js"></script>
     <script src="ascii.js"></script>
 </head>
 
 <body>
     <h1>ASCII Animation Viewer</h1>
-
+    <!--Text Box-->
     <textarea id="animationText" rows="20" cols="80"></textarea>
 
     <fieldset>
+        <!--Start Button-->
         <legend>Play Controls:</legend>
         <button id="startButton">Start</button>
         <button id="stopButton" disabled>Stop</button>
@@ -27,7 +26,7 @@
 
     <fieldset>
     <legend>Animation:</legend>
-    
+        <!--Animation Button-->
         <select id="animationSelect">
             <option value="Blank">Blank</option>
             <option value="Exercise">Exercise</option>
@@ -39,6 +38,7 @@
 
     <fieldset>
         <legend>Size:</legend>
+        <!--Font Size Button-->
         <label for="fontSizeSelect"></label>
         <select id="fontSizeSelect">
             <option value="7pt">Tiny</option>
@@ -52,11 +52,13 @@
 
     <fieldset>
         <legend>Speed:</legend>
+        <!--Turbo Button-->
         <input type="checkbox" id="turboCheckbox">
         <label for="turboCheckbox">Turbo</label>
     </fieldset>
 
     <div id="validators">
+        <!--Validators-->
         <a href="http://validator.w3.org/"><img src="w3c-xhtml.png" alt="html"></a><br>
 
         <a href="http://jigsaw.w3.org/css-validator/"><img src="w3c-css.png" alt="CSS"></a><br>
