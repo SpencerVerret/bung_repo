@@ -6,7 +6,7 @@ $("#animationText").val(EXERCISE);
 $("#animationText").val(BIKE);
 $("#animationText").val(DIVE); 
 
-const animations = {
+const ANIMATIONS = {
     BLANK: "",
     EXERCISE: "Frames for Exercise animation...",
     JUGGLER: "Frames for Juggler animation...",
@@ -73,7 +73,7 @@ function calculateInterval() {
 
 function changeAnimation() {
     const selectedAnimation = $("#animationSelect").val();
-    $("#animationText").val(animations[selectedAnimation]);
+    $("#animationText").val(ANIMATIONS[selectedAnimation]);
 }
 
 function changeFontSize() {
