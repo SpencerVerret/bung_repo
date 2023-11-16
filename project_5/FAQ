@@ -1,0 +1,82 @@
+Homework 5 (ASCIImation) FAQ
+
+Q: I am stuck. Nothing works. Help me!
+A: Try doing these things:
+W3C HTML/CSS validate your page first.
+Put a JS alert at the top of your file and/or function and see if it shows up.
+Run your JS code through JSLint and fix all errors.
+Try the browser console / debugger and see if you can step through and find the bug.
+Set "use strict"; in your script and look for any errors.
+Place the script element for jQuery before all other script tags
+
+
+Q: Why does it reload my page every time I click a button? (For example, 
+it sets the text in the text area, then it clears it out right away and refreshes the page.)
+A: Don't use a form tag on your page. 
+If you do, it will treat any button click as an attempt to submit that form, 
+which will refresh your page.
+
+
+Q: Why doesn't it work whenever I try to set a style in JavaScript?
+A: Don't forget to use a string with proper units, like "3em" or "20px". Try JSLint.
+
+
+Q: Why can't I get the text out of a textarea in my JS code?
+A: Remember that it's stored as the value, not innerHTML, of the text area.
+
+
+Q: Why doesn't my for or while loop for animation work?
+A: Don't use a loop to produce animation. Use a timer with the setInterval function.
+
+
+Q: The spec says to use setInterval to implement my timer, 
+but I want to use setTimeout instead. Is that okay?
+A: No. Using setTimeout would require you to keep setting timers over and over again, 
+one to display each frame. This is inefficient for the browser. Use setInterval.
+
+
+Q: I set my font size to be big, but the fonts on my form controls are still small. Why is that?
+A: Normally when you set a style like a font-size on an outer tag, 
+that style will be inherited by all of the tags inside it. 
+But form controls ignore some settings from their parent, like font sizes. 
+So you must explicitly tell your CSS rules to target those kinds of elements 
+if you want the rules to apply to those controls.
+
+
+Q: Why are all of my animation frames (except the first one) lowered down by 1 line?
+A: Maybe you aren't using exactly the right delimiter to break apart the frames. Read the spec carefully.
+
+
+Q: If the user starts, stops, and then starts the same animation 
+again do you want the animation to begin where it left off before the user stopped it? 
+Or should we begin the animation from the first frame?
+A: It should start over.
+
+
+Q: How do I examine or set the id or class properties of an HTML tag in JavaScript?
+A: Look at the JS DOM object for the tag, and examine its .id or .className attributes respectively.
+
+
+Q: How many global variables am I allowed to have?
+A: A variable should only be global if you truly need its value across many functions 
+(or many calls to a function), and if it can't be reasonably passed as a parameter, 
+and if the value can't be discovered in some other reasonable way. 
+For example, it is almost always bad form to store DOM objects 
+(objects returned by functions like $) in global variables, because you 
+can easily access these objects again by calling $ again.
+
+
+Q: Why doesn't this work? How can I pass a parameter to an onclick handler? 
+$("mybutton").onclick = myFunction(42);
+A: If you write () or parameters when attaching an event handler, 
+it actually calls the handler right there, rather than attaching it to be called later. 
+But if you want parameters, you can do one of the following instead:
+$("#mybutton").onclick = f;
+...
+function f() {
+	myFunction(42);
+}
+// anonymous function; may be bad style
+$("#mybutton").onclick = function() {
+	myFunction(42);
+};
