@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCIImation</title>
+    <link rel="stylesheet" href="ascii.css">
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Include animations.js before ascii.js -->
+    <script src="animations.js"></script>
+    <script src="ascii.js"></script>
+</head>
+
+<body>
+    <h1>ASCII Animation Viewer</h1>
+
+    <textarea id="animationText" rows="20" cols="80"></textarea>
+
+    <fieldset>
+        <legend>Play Controls:</legend>
+        <button id="startButton">Start</button>
+        <button id="stopButton" disabled>Stop</button>
+    </fieldset>
+
+    <fieldset>
+    <legend>Animation:</legend>
+    
+        <select id="animationSelect">
+            <option value="Blank">Blank</option>
+            <option value="Exercise">Exercise</option>
+            <option value="Juggler">Juggler</option>
+            <option value="Bike">Bike</option>
+            <option value="Dive">Dive</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Size:</legend>
+        <label for="fontSizeSelect"></label>
+        <select id="fontSizeSelect">
+            <option value="Tiny">Tiny</option>
+            <option value="Small">Small</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Large">Large</option>
+            <option value="ExtraLarge">Extra Large</option>
+            <option value="XXL">XXL</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Speed:</legend>
+        <input type="checkbox" id="turboCheckbox">
+        <label for="turboCheckbox">Turbo</label>
+    </fieldset>
+
+    <div id="validators">
+        <a href="http://validator.w3.org/"><img src="w3c-xhtml.png" alt="html"></a><br>
+
+        <a href="http://jigsaw.w3.org/css-validator/"><img src="w3c-css.png" alt="CSS"></a><br>
+
+        <a href="http://www.jslint.com/"><img src="w3c-js.png" alt="JS"></a>
+    </div>
+</body>
+
+</html>
