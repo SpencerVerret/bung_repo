@@ -6,7 +6,7 @@ $("#animationText").val(EXERCISE);
 $("#animationText").val(BIKE);
 $("#animationText").val(DIVE); 
 
-const ANIMATIONS = {
+const animations = {
     BLANK: "",
     EXERCISE: "Frames for Exercise animation...",
     JUGGLER: "Frames for Juggler animation...",
