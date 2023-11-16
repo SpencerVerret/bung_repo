@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASCIImation</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="ascii.css">
-    <script src="./animations.js"></script>
-    <script src="./ascii.js"></script>
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Include animations.js before ascii.js -->
+    <script src="animations.js"></script>
+    <script src="ascii.js"></script>
 </head>
 
 <body>
@@ -39,13 +41,13 @@
         <legend>Size:</legend>
         <label for="fontSizeSelect"></label>
         <select id="fontSizeSelect">
-            <option value="Tiny">Tiny</option>
-            <option value="Small">Small</option>
-            <option value="Medium" selected>Medium</option>
-            <option value="Large">Large</option>
-            <option value="ExtraLarge">Extra Large</option>
-            <option value="XXL">XXL</option>
-        </select>
+            <option value="7pt">Tiny</option>
+            <option value="10pt">Small</option>
+            <option value="12pt" selected>Medium</option>
+            <option value="16pt">Large</option>
+            <option value="24pt">Extra Large</option>
+            <option value="32pt">XXL</option>
+        </select>        
     </fieldset>
 
     <fieldset>
