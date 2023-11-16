@@ -1,3 +1,5 @@
+//Spencer Verret, INFX 370, ascii.js for project 5
+
 "use strict";
 
 $("#animationText").val(BLANK); 
@@ -14,6 +16,7 @@ const animations = {
     DIVE: "Frames for Dive animation..."
 };
 
+//Function Call
 $(document).ready(function () {
     // Initialize
     $("#startButton").on("click", startAnimation);
@@ -25,7 +28,7 @@ $(document).ready(function () {
     // Initial state
     disableButton("#stopButton");
     disableSelect("#animationSelect");
-    disableButton("#turboCheckbox");
+    enableButton("#turboCheckbox");
     // Set initial animation
     changeAnimation();
 });
@@ -33,12 +36,13 @@ $(document).ready(function () {
 let animationInterval;
 let currentFrame = 0;
 
+//Starts Animation
 function startAnimation() {
     enableButton("#stopButton");
     disableSelect("#animationSelect");
-    disableButton("#turboCheckbox");
+    enableButton("#turboCheckbox");
 
-    const frames = $("#animationText").val().split("=====\n"); // Adjust separator if needed
+    const frames = $("#animationText").val().split("=====\n"); 
 
     // Reset currentFrame
     currentFrame = 0;
@@ -54,6 +58,7 @@ function startAnimation() {
     }, calculateInterval()); // Adjust the interval based on turbo state
 }
 
+//Stop Animation
 function stopAnimation() {
     disableButton("#stopButton");
     enableSelect("#animationSelect");
@@ -63,19 +68,20 @@ function stopAnimation() {
     clearInterval(animationInterval);
 }
 
+// Calculate the interval based on turbo state
 function calculateInterval() {
-    // Calculate the interval based on turbo state
     const baseInterval = 250; // Default interval
     const turboInterval = 50; // Interval when turbo is enabled
-
     return $("#turboCheckbox").prop("checked") ? turboInterval : baseInterval;
 }
 
+//Changes Animation
 function changeAnimation() {
     const selectedAnimation = $("#animationSelect").val();
     $("#animationText").val(ANIMATIONS[selectedAnimation]);
 }
 
+//Changes Font Size
 function changeFontSize() {
     const selectedSize = $("#fontSizeSelect").val();
     $("#animationText").css("font-size", selectedSize);
@@ -84,18 +90,18 @@ function changeFontSize() {
 // Event listener for the font size select dropdown
 $("#fontSizeSelect").on("change", changeFontSize);
 
-
+//Function for Turbo Button
 function toggleTurbo() {
     const isChecked = $("#turboCheckbox").prop("checked");
     const delay = isChecked ? 50 : 250;
-
-    // Implement logic to update animation speed
-
+    // Update animation speed immediately
     clearInterval(animationInterval);
     animationInterval = setInterval(function () {
-        // existing code
     }, delay);
 }
+// Event listener for the turbo checkbox
+$("#turboCheckbox").on("change", toggleTurbo);
+
 
 function enableButton(buttonId) {
     $(buttonId).prop("disabled", false);
