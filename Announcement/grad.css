@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('grad.png'); /* Change 'background-image.jpg' to the path of your image */
+  background-size: contain;
+  background-position: top;
+}
+
+.announcement {
+  background-color: #d65757;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: .90;
+  /* background-image: url('bung.png'); */
+  /* background-size: cover; */
+}
+
+h1 {
+  color: #080303;
+  text-align: center;
+  font-size: 35px;
+}
+
+p {
+  color: #070505;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.bottom-right {
+  bottom: 30px;
+  margin-left: 400px;
+  margin-top: -200px;
+  max-width: 200px; /* adjust as needed */
+  opacity: .90;
+}
+
+.cursive-text {
+  font-family: cursive;
+  font-size: 38pt;
+}
+
+.aggressive-text {
+  font-family: Impact, Haettenschweiler, sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase; /* Optional for additional emphasis */
+  letter-spacing: 2px; /* Optional for additional spacing between characters */
+}
+
+.image-container {
+  text-align: center; /* Center-align the content */
+}
+
